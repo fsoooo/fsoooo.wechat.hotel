@@ -1,21 +1,30 @@
 /**index.wxss**/
 .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin-top: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
 }
 
 .userinfo-nickname {
-  color: #aaa;
+    color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
+.orders {
+    margin-top: 50rpx;
+    padding: 40rpx 0;
+    font-size: 30rpx;
+    text-align: center;
+    background-color: #fff;
+}
+.van-icon {
+    display: block;
+    font-size: 30rpx;
 }

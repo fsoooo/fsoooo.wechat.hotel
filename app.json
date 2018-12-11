@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/index",
     "pages/index/index",
     "pages/explore/explore",
     "pages/destination/destination",
@@ -8,7 +9,6 @@
     "pages/waypoint/waypoint",
     "pages/user/user",
     "pages/trip/trip",
-    "pages/home/index",
     "pages/logs/logs"
   ],
   "window": {
@@ -36,10 +36,10 @@
         "text": "发现"
       },
       {
-        "pagePath": "pages/explore/explore",
-        "iconPath": "images/explore_normal.png",
-        "selectedIconPath": "images/explore_pressed.png",
-        "text": "发现"
+        "pagePath": "pages/home/index",
+        "iconPath": "images/personal_normal.png",
+        "selectedIconPath": "images/personal_pressed.png",
+        "text": "我的"
       }
     ]
   },
