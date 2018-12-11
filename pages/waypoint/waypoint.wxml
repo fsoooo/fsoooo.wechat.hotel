@@ -5,7 +5,7 @@
     </view>
     <view wx:if="{{ waypoint.text }}" class="text">{{ waypoint.text }}</view>
     <view class="wp-stats">
-      <view class="wp-time"><image class="icon-time" src="../../static/images/time.png"></image>{{ waypoint.local_time }}</view>
+      <view class="wp-time"><image class="icon-time" src="../../images/time.png"></image>{{ waypoint.local_time }}</view>
     </view>
   </block>
   <view class="recommender">

@@ -25,14 +25,20 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/images/index_normal.png",
-        "selectedIconPath": "static/images/index_pressed.png",
+        "iconPath": "images/index_normal.png",
+        "selectedIconPath": "images/index_pressed.png",
         "text": "推荐"
       },
       {
         "pagePath": "pages/explore/explore",
-        "iconPath": "static/images/explore_normal.png",
-        "selectedIconPath": "static/images/explore_pressed.png",
+        "iconPath": "images/explore_normal.png",
+        "selectedIconPath": "images/explore_pressed.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "iconPath": "images/explore_normal.png",
+        "selectedIconPath": "images/explore_pressed.png",
         "text": "发现"
       }
     ]

@@ -10,14 +10,14 @@
   <view class="mask"></view>
 </view>
 <view class="nav">
-  <image bindtap="viewPOIList" src="../../static/images/destination/pois.png"></image>
-  <image bindtap="viewTripList" src="../../static/images/destination/trips.png"></image>
+  <image bindtap="viewPOIList" src="../../images/destination/pois.png"></image>
+  <image bindtap="viewTripList" src="../../images/destination/trips.png"></image>
 </view>
 <view wx:if="{{ pois }}" class="place">
   <view class="h2">
-    <image src="../../static/images/destination/divide_l.png"></image>
+    <image src="../../images/destination/divide_l.png"></image>
     <text>热门地点</text>
-    <image src="../../static/images/destination/divide_r.png"></image>
+    <image src="../../images/destination/divide_r.png"></image>
   </view>
   <view class="list">
     <view wx:for="{{ pois }}" wx:for-item="poi" class="poi" wx:key="poi.id">
