@@ -1,5 +1,5 @@
 //接口地址
-const apiURL = 'http://61.innfotech.com';
+const apiURL = 'http://api.breadtrip.com';
 
 //请求方法
 const wxRequest = (params, url) => {

@@ -3,21 +3,11 @@
 page{
   background-color: #f6f6f6;
 }
-.list{
-}
-.m-trip{
+.m-trip-s{
   margin: 20rpx;
-}
-.trip-title{
-  margin-bottom: 10rpx;
 }
 .loading{
   color: #b0b0b0;
   text-align: center;
   margin: 20rpx 0;
-}
-.loading-gif{
-  width: 220rpx;
-  height: 42rpx;
-  vertical-align: bottom;
 }

@@ -1,54 +1,64 @@
-//index.js
-//获取应用实例
-const app = getApp()
+const App = getApp();
+const api = require('../../utils/api.js');
+const util = require('../../utils/util.js');
+
+const formatTime = util.formatTime;
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    trips: [],
+    start: 0,
+    loading: false,
+    windowWidth: App.systemInfo.windowWidth,
+    windowHeight: App.systemInfo.windowHeight,
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  onLoad() {
+    this.loadMore();
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+  onPullDownRefresh() {
+    this.loadMore(null, true);
+  },
+  loadMore(e, needRefresh) {
+    const self = this;
+    const loading = self.data.loading;
+    const data = {
+      next_start: self.data.start,
+    };
+    if (loading) {
+      return;
     }
+    self.setData({
+      loading: true,
+    });
+    api.getHotTripList({
+      data,
+      success: (res) => {
+        let newList = res.data.data.elements;
+        newList.map((trip) => {
+          const item = trip;
+          item.data[0].date_added = formatTime(new Date(item.data[0].date_added * 1000), 1);
+          return item;
+        });
+        if (needRefresh) {
+          wx.stopPullDownRefresh();
+        } else {
+          newList = self.data.trips.concat(newList);
+        }
+        self.setData({
+          trips: newList,
+        });
+        const nextStart = res.data.data.next_start;
+        self.setData({
+          start: nextStart,
+          loading: false,
+        });
+      },
+    });
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
-})
+  viewTrip(e) {
+    const ds = e.currentTarget.dataset;
+    wx.navigateTo({
+      url: `../trip/trip?id=${ds.id}&name=${ds.name}`,
+    });
+  },
+});
