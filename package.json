@@ -1,0 +1,21 @@
+{
+  "name": "weapp-hotel",
+  "version": "1.0.0",
+  "description": "A Wechat Small programming : weapp-hotel",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/wangslei/weapp-hotel.git"
+  },
+  "keywords": [
+    "weapp-hotel"
+  ],
+  "author": "wangsl",
+  "license": "ISC",
+  "dependencies": {
+    "vant-weapp": "^0.4.9"
+  }
+}
