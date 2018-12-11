@@ -21,7 +21,7 @@
                   </view>
                   <view wx:if="{{ wp.text }}" class="text">{{ wp.text }}</view>
                   <view class="wp-stats">
-                    <view class="wp-time"><image class="icon-time" src="../../images/time.png"></image>{{ wp.local_time }}</view>
+                    <view class="wp-time"><image class="icon-time" src="../../static/images/time.png"></image>{{ wp.local_time }}</view>
                   </view>
                 </block>
               </view>
