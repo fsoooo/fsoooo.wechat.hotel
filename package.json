@@ -17,9 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "vant-weapp": "^0.4.9",
-    "wux-weapp": "^3.3.0",
-    "eslint": "^3.9.1",
-    "eslint-config-airbnb-base": "^9.0.0",
-    "eslint-plugin-import": "^2.0.1"
+    "wux-weapp": "^3.3.0"
   }
 }
