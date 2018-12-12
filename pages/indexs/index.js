@@ -107,6 +107,12 @@ Page({
                 url: `../home/index?id=${ds.id}&name=${ds.name}`,
             });
         },
+        toDate(e) {
+            const ds = e.currentTarget.dataset;
+            wx.navigateTo({
+                url: `../date/index?id=${ds.id}&name=${ds.name}`,
+            });
+        },
         toLocation(e) {
             const ds = e.currentTarget.dataset;
             wx.navigateTo({

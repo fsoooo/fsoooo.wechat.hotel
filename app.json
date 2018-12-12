@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/indexs/index",
     "pages/home/index",
     "pages/date/index",
     "pages/calendar/index",
     "pages/location/index",
-    "pages/indexs/index",
+
     "pages/index/index",
     "pages/explore/explore",
     "pages/destination/destination",

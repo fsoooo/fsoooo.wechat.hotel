@@ -21,3 +21,10 @@ page{
   height: 42rpx;
   vertical-align: bottom;
 }
+.add-wrap {
+  position:fixed;
+  bottom:10%;
+  display:flex;
+  width:100%;
+  justify-content:center;
+}

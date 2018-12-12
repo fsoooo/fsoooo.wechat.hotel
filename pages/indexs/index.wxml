@@ -1,12 +1,20 @@
 <view>
     <van-row>
         <van-col span="8">
-            <view bindtap="toHome"><van-cell title="我的" icon="contact"/></view>
+            <view bindtap="toHome">
+                <van-cell title="我的" icon="contact"/>
+            </view>
         </van-col>
         <van-col span="8">
-            <view bindtap="toLocation"><van-cell title="北京" icon="location"/></view>
+            <view bindtap="toLocation">
+                <van-cell title="北京" icon="location"/>
+            </view>
         </van-col>
-        <van-col span="8"><view><vant-cell /></view></van-col>
+        <van-col span="8">
+            <view>
+                <vant-cell/>
+            </view>
+        </van-col>
     </van-row>
 </view>
 
@@ -23,10 +31,12 @@
                     <view class="content" wx:if="{{item.key=='tab1'}}">
                         <view>
                             <import src="../../components/trip/trip.wxml"/>
-                            <scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"
+                            <scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;"
+                                         scroll-y="true"
                                          bindscrolltolower="loadMore" lower-threshold="800">
                                 <block wx:for="{{ trips }}" wx:for-item="trip" wx:key="trip.data[0].id">
-                                    <template is="m-trip" wx:if="{{ trip.type === 4 }}" data="{{trip: trip.data[0], mode: 1}}"/>
+                                    <template is="m-trip" wx:if="{{ trip.type === 4 }}"
+                                              data="{{trip: trip.data[0], mode: 1}}"/>
                                 </block>
                                 <view class="loading">
                                     正在加载...
@@ -53,6 +63,10 @@
         正在加载...
     </view>
 </scroll-view>
+
+<view class="add-wrap" hover-class="plus-hover">
+    <icon type="waiting" size="60" bindtap="toDate"/>
+</view>
 
 
 
