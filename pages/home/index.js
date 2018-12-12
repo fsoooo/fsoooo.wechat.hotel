@@ -5,6 +5,10 @@ const app = getApp()
 Page({
     data: {
         userInfo: {},
+        memberInfo: {
+            "num":"NO.00001",
+            "type":"星会员",
+        },
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
