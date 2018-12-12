@@ -1,7 +1,10 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/date/index",
+    "pages/calendar/index",
+    "pages/location/index",
     "pages/indexs/index",
+    "pages/index/index",
     "pages/explore/explore",
     "pages/destination/destination",
     "pages/poi_list/poi_list",
@@ -47,6 +50,12 @@
         "iconPath": "images/personal_normal.png",
         "selectedIconPath": "images/personal_pressed.png",
         "text": "我的"
+      },
+      {
+        "pagePath": "pages/date/index",
+        "iconPath": "images/personal_normal.png",
+        "selectedIconPath": "images/personal_pressed.png",
+        "text": "日期"
       }
     ]
   },

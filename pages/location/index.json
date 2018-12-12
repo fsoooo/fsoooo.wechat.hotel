@@ -1,0 +1,16 @@
+{
+
+  "navigationBarTitleText": "选择城市",
+  "usingComponents": {
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-row": "/miniprogram_npm/vant-weapp/row/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+
+    "wux-search-bar": "/miniprogram_npm/wux-weapp/search-bar/index",
+    "wux-icon": "/miniprogram_npm/wux-weapp/icon/index",
+    "wux-grids": "/miniprogram_npm/wux-weapp/grids/index",
+    "wux-grid": "/miniprogram_npm/wux-weapp/grid/index"
+  }
+}

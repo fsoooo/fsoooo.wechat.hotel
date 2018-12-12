@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="page">
+        <view class="page__bd">
+            <wux-search-bar clear show-cancel value="{{ value }}" controlled placeholder="请输入目的地" bind:change="onChange"
+                            bind:focus="onFocus" bind:blur="onBlur" bind:confirm="onConfirm" bind:clear="onClear"
+                            bind:cancel="onCancel"/>
+        </view>
+    </view>
+    <view>
+        <van-cell
+                title="{{location}}"
+                icon="location"
+        />
+    </view>
+    <view class="page">
+        <view class="page__bd">
+            <wux-grids col="4">
+                <block wx:for="{{ citys }}" wx:for-item="city" wx:key="city.id">
+                    <wux-grid label="{{city.city}}"/>
+                </block>
+            </wux-grids>
+        </view>
+    </view>
+</view>
+
+
+
+

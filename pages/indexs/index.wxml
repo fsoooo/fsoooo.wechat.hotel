@@ -1,12 +1,12 @@
 <view>
     <van-row>
-        <van-col span="8" bindchange="toPersonal">
-            <van-cell icon="contact"/>
+        <van-col span="8">
+            <view bindtap="toHome"><van-cell title="我的" icon="contact"/></view>
         </van-col>
         <van-col span="8">
-            <van-cell title="北京" icon="location"/>
+            <view bindtap="toLocation"><van-cell title="北京" icon="location"/></view>
         </van-col>
-        <van-col span="8"></van-col>
+        <van-col span="8"><view><vant-cell /></view></van-col>
     </van-row>
 </view>
 
