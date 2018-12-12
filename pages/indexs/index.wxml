@@ -1,0 +1,59 @@
+<view>
+    <van-row>
+        <van-col span="8" bindchange="toPersonal">
+            <van-cell icon="contact"/>
+        </van-col>
+        <van-col span="8">
+            <van-cell title="北京" icon="location"/>
+        </van-col>
+        <van-col span="8"></van-col>
+    </van-row>
+</view>
+
+<view class="page">
+    <view class="page__bd">
+        <wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange">
+            <block wx:for="{{ tabs }}" wx:key="key">
+                <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+            </block>
+        </wux-tabs>
+        <swiper current="{{ index }}" bindchange="onSwiperChange">
+            <block wx:for="{{ tabs }}" wx:key="key">
+                <swiper-item>
+                    <view class="content" wx:if="{{item.key=='tab1'}}">
+                        <view>
+                            <import src="../../components/trip/trip.wxml"/>
+                            <scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"
+                                         bindscrolltolower="loadMore" lower-threshold="800">
+                                <block wx:for="{{ trips }}" wx:for-item="trip" wx:key="trip.data[0].id">
+                                    <template is="m-trip" wx:if="{{ trip.type === 4 }}" data="{{trip: trip.data[0], mode: 1}}"/>
+                                </block>
+                                <view class="loading">
+                                    正在加载...
+                                </view>
+                            </scroll-view>
+                        </view>
+                    </view>
+                    <view class="content" wx:if="{{item.key=='tab2'}}">
+                        {{ item.content }}
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>
+
+<import src="../../components/trip/trip.wxml"/>
+<scroll-view class="list" style="height: {{ windowHeight }}px; width: {{ windowWidth }}px;" scroll-y="true"
+             bindscrolltolower="loadMore" lower-threshold="800">
+    <block wx:for="{{ trips }}" wx:for-item="trip" wx:key="trip.data[0].id">
+        <template is="m-trip" wx:if="{{ trip.type === 4 }}" data="{{trip: trip.data[0], mode: 1}}"/>
+    </block>
+    <view class="loading">
+        正在加载...
+    </view>
+</scroll-view>
+
+
+
+

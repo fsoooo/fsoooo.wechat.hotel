@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/index",
     "pages/index/index",
+    "pages/indexs/index",
     "pages/explore/explore",
     "pages/destination/destination",
     "pages/poi_list/poi_list",
@@ -9,6 +9,7 @@
     "pages/waypoint/waypoint",
     "pages/user/user",
     "pages/trip/trip",
+    "pages/home/index",
     "pages/logs/logs"
   ],
   "window": {
@@ -23,6 +24,12 @@
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
+      {
+        "pagePath": "pages/indexs/index",
+        "iconPath": "images/home_normal.png",
+        "selectedIconPath": "images/home_pressed.png",
+        "text": "首页"
+      },
       {
         "pagePath": "pages/index/index",
         "iconPath": "images/index_normal.png",
