@@ -13,14 +13,14 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     //事件处理函数
-    bindViewTap: function () {
+    toRoom: function () {
         wx.navigateTo({
-            url: '../logs/logs'
+            url: '../room/home'
         })
     },
-    toCoupon: function () {
+    toBook: function () {
         wx.navigateTo({
-            url: '../logs/logs'
+            url: '../book/book'
         })
     },
     onLoad: function () {

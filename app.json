@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/indexs/index",
     "pages/home/index",
+    "pages/indexs/index",
     "pages/date/index",
     "pages/calendar/index",
     "pages/location/index",
@@ -14,7 +14,12 @@
     "pages/waypoint/waypoint",
     "pages/user/user",
     "pages/trip/trip",
-    "pages/logs/logs"
+
+    "pages/room/home",
+    "pages/book/book",
+    "pages/mine/mine",
+    "pages/book/room/room",
+    "pages/mine/order/order",
   ],
   "window": {
     "backgroundTextStyle": "dark",

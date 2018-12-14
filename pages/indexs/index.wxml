@@ -64,8 +64,8 @@
     </view>
 </scroll-view>
 
-<view class="add-wrap" hover-class="plus-hover">
-    <icon type="waiting" size="60" bindtap="toDate"/>
+<view class="add-wrap" hover-class="plus-hover"  bindtap="toDate">
+    <icon type="waiting" size="80"/>
 </view>
 
 

@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="container">
     <view class="usertop">
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     </view>
     <view class="userinfo">
             <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称
             </button>
             <block wx:else>
-                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+                <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
                 <text class="userinfo-nickname">{{userInfo.nickName}}</text>
                 <text class="userinfo-nickname">{{memberInfo.num}}</text>
                 <text class="userinfo-nickname">{{memberInfo.type}}</text>
@@ -15,12 +15,12 @@
         </view>
     <view class="orders">
         <van-row>
-            <van-col span="12">
+            <van-col span="12" bindtap="toRoom">
                 <wux-icon type="ios-paper" size="45" color="#1bb8ff"/>
                 <view>全部订单</view>
             </van-col>
 
-            <van-col span="12">
+            <van-col span="12" bindtap="toBook">
                 <wux-badge count="0" show-zero="{{ true }}">
                     <wux-icon type="md-calendar" size="45" color="#1bb8ff"/>
                 </wux-badge>
