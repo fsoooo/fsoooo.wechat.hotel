@@ -19,7 +19,7 @@
     "pages/book/book",
     "pages/mine/mine",
     "pages/book/room/room",
-    "pages/mine/order/order",
+    "pages/mine/order/order"
   ],
   "window": {
     "backgroundTextStyle": "dark",
