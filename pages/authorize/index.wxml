@@ -1,17 +1,23 @@
-
-<template name="access-box">
-    <view class='box'>
-        <view class='msg-box'>
-            <text class='title'>{{title}}</text>
-            <view class='line'/>
-            <text class='msg'> {{msg}} </text>
-            <view class='btn'>
-                <button type='primary' bindtap='cancle' class='btn-cancle'>{{cancle}}</button>
-                <button type='primary' class='btn-confirm' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>{{confirm}}</button>
-            </view>
-        </view>
+<!--index.wxml-->
+<view class="container">
+    <view class="usertop">
+        <image src="http://img1.focus.cn/upload/cq/10852/a_108513565.jpg" mode="cover"></image>
     </view>
+    <view class="userinfo">
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <wux-icon type="md-code-working" size="20" color="#1bb8ff"/>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </view>
+    <view class='btn'>
+        <button type='primary' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>立即关联</button>
+    </view>
+    <view class="redio">
+        <radio value="1" checked="1"/>
+        我已阅读并已同意《XXX会员服务条框》和《XXX隐私声明》
+    </view>
+</view>
 
-</template>
 
-<template is="access-box" data="{{...access}}"/>
+
+
+

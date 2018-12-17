@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/authorize/index",
     "pages/home/index",
     "pages/indexs/index",
     "pages/date/index",
     "pages/calendar/index",
     "pages/location/index",
     "pages/index/index",
-    "pages/authorize/index",
+
 
     "pages/explore/explore",
     "pages/destination/destination",

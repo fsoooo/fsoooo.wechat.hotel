@@ -1,7 +1,20 @@
 {
   "navigationBarTitleText": "账号关联",
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "backgroundColor": "#FFEBCD",
-  "backgroundTextStyle": "light"
+  "usingComponents": {
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-row": "/miniprogram_npm/vant-weapp/row/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+
+
+    "wux-cell": "/miniprogram_npm/wux-weapp/cell/index",
+    "wux-cell-group": "/miniprogram_npm/wux-weapp/cell-group/index",
+    "wux-row": "/miniprogram_npm/wux-weapp/row/index",
+    "wux-col": "/miniprogram_npm/wux-weapp/col/index",
+    "wux-tabs": "/miniprogram_npm/wux-weapp/tabs/index",
+    "wux-tab": "/miniprogram_npm/wux-weapp/tab/index",
+    "wux-badge": "/miniprogram_npm/wux-weapp/badge/index",
+    "wux-icon": "/miniprogram_npm/wux-weapp/icon/index"
+  }
 }
