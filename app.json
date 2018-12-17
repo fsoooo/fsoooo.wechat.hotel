@@ -1,12 +1,12 @@
 {
   "pages": [
-    "pages/authorize/index",
     "pages/home/index",
     "pages/indexs/index",
     "pages/date/index",
+    "pages/index/index",
     "pages/calendar/index",
     "pages/location/index",
-    "pages/index/index",
+    "pages/authorize/index",
 
     "pages/explore/explore",
     "pages/destination/destination",
@@ -18,7 +18,7 @@
 
     "pages/room/home",
     "pages/book/book",
-    "pages/book/room/room",
+    "pages/book/room/room"
   ],
   "window": {
     "backgroundTextStyle": "dark",
