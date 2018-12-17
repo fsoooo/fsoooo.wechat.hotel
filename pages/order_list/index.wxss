@@ -1,0 +1,15 @@
+/**index.wxss**/
+.usertop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+}
+.usertop image{
+    width: 100%;
+}
+.userinfo{
+    width: 50%;
+}
+

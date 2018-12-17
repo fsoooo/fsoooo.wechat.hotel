@@ -1,6 +1,6 @@
 // pages/book/roomdetail/room.js
 var app = getApp();
-var Bmob = require('../../../utils/bmob.js');
+var Bmob = require('../../utils/bmob.js');
 var openid, stat, b, c, d, stime, etime, snum, msg;
 Page({
 

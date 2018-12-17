@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="usertop">
+        <image src="http://img1.focus.cn/upload/cq/10852/a_108513565.jpg" mode="cover"></image>
+    </view>
+    <view class="userinfo">
+        <block wx:for="{{orderLists}}" wx:key="itemId">
+            <view class="room" data-id="{{item.id}}" bindtap="go_roomdetail">
+                <view>
+                    <view class="room_infoname">{{item.hotelName}}</view>
+                    <view class="room_infoname">{{item.roomType}}</view>
+                    <view class="room_infoname">{{item.orderStatus}}</view>
+                    <view class="room_infoname">{{item.hotelName}}</view>
+                </view>
+                <view>
+                    <view class="room_infoname">{{item.price}}</view>
+                </view>
+                <view>
+                    <view class="room_infoname">{{item.beginTime}}</view>
+                    <view class="room_infoname">{{item.endTime}}</view>
+                </view>
+
+            </view>
+        </block>
+    </view>
+</view>
+
+
+
+
+

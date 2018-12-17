@@ -1,5 +1,6 @@
 {
   "pages": [
+
     "pages/home/index",
     "pages/indexs/index",
     "pages/date/index",
@@ -7,6 +8,7 @@
     "pages/calendar/index",
     "pages/location/index",
     "pages/authorize/index",
+    "pages/order_list/index",
 
     "pages/explore/explore",
     "pages/destination/destination",
@@ -17,8 +19,7 @@
     "pages/trip/trip",
 
     "pages/room/home",
-    "pages/book/book",
-    "pages/book/room/room"
+    "pages/book_room/room"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -20,7 +20,7 @@ Page({
     },
     toBook: function () {
         wx.navigateTo({
-            url: '../book/book'
+            url: '../order_list/index'
         })
     },
     toAuthorize:function(){
