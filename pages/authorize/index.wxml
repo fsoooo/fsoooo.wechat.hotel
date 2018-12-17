@@ -1,0 +1,17 @@
+
+<template name="access-box">
+    <view class='box'>
+        <view class='msg-box'>
+            <text class='title'>{{title}}</text>
+            <view class='line'/>
+            <text class='msg'> {{msg}} </text>
+            <view class='btn'>
+                <button type='primary' bindtap='cancle' class='btn-cancle'>{{cancle}}</button>
+                <button type='primary' class='btn-confirm' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>{{confirm}}</button>
+            </view>
+        </view>
+    </view>
+
+</template>
+
+<template is="access-box" data="{{...access}}"/>

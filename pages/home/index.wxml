@@ -1,9 +1,10 @@
 <!--index.wxml-->
 <view class="container">
     <view class="usertop">
-        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <image src="http://img1.focus.cn/upload/cq/10852/a_108513565.jpg" mode="cover"></image>
     </view>
-    <view class="userinfo">
+    <view class="add-wrap" hover-class="plus-hover"  bindtap="toDate">
+        <view class="userinfo">
             <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称
             </button>
             <block wx:else>
@@ -13,18 +14,26 @@
                 <text class="userinfo-nickname">{{memberInfo.type}}</text>
             </block>
         </view>
+    </view>
+
     <view class="orders">
         <van-row>
-            <van-col span="12" bindtap="toRoom">
+            <van-col span="8" bindtap="toRoom">
                 <wux-icon type="ios-paper" size="45" color="#1bb8ff"/>
                 <view>全部订单</view>
             </van-col>
 
-            <van-col span="12" bindtap="toBook">
+            <van-col span="8" bindtap="toBook">
                 <wux-badge count="0" show-zero="{{ true }}">
                     <wux-icon type="md-calendar" size="45" color="#1bb8ff"/>
                 </wux-badge>
                 <view>待入住</view>
+            </van-col>
+            <van-col span="8" bindtap="toAuthorize">
+                <wux-badge count="0" show-zero="{{ true }}">
+                    <wux-icon type="md-filing" size="45" color="#1bb8ff"/>
+                </wux-badge>
+                <view>已完成</view>
             </van-col>
         </van-row>
     </view>

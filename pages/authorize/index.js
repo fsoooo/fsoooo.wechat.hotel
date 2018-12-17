@@ -5,36 +5,31 @@ const app = getApp()
 Page({
     data: {
         userInfo: {},
-        memberInfo: {
-            "num":"NO.00001",
-            "type":"星会员",
-        },
         hasUserInfo: false,
-        canIUse: wx.canIUse('button.open-type.getUserInfo')
+        canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        access: {
+            title: "微信授权",
+            msg: '获得你公开信息（昵称、头像）',
+            cancle: '取消',
+            confirm:'授权'
+        }
     },
     //事件处理函数
-    toRoom: function () {
-        wx.navigateTo({
-            url: '../room/home'
-        })
+    cancle: function (event) {
+        console.log('cancle')
+
     },
-    toBook: function () {
-        wx.navigateTo({
-            url: '../book/book'
-        })
+    confirm: function (event) {
+        console.log('confirm')
     },
-    toAuthorize:function(){
-        wx.navigateTo({
-            url: '../authorize/index'
-        })
-    },
+
     onLoad: function () {
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
                 hasUserInfo: true
             })
-        } else if (this.data.canIUse) {
+        } else if (this.data.canIUse){
             // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
             // 所以此处加入 callback 以防止这种情况
             app.userInfoReadyCallback = res => {
@@ -56,8 +51,8 @@ Page({
             })
         }
     },
-    getUserInfo: function (e) {
-        console.log(e)
+    getUserInfo: function(e) {
+        console.log(e.detail)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
             userInfo: e.detail.userInfo,

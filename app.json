@@ -5,8 +5,9 @@
     "pages/date/index",
     "pages/calendar/index",
     "pages/location/index",
-
     "pages/index/index",
+    "pages/authorize/index",
+
     "pages/explore/explore",
     "pages/destination/destination",
     "pages/poi_list/poi_list",
