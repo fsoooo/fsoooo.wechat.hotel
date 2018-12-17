@@ -8,7 +8,6 @@
     "pages/location/index",
     "pages/index/index",
 
-
     "pages/explore/explore",
     "pages/destination/destination",
     "pages/poi_list/poi_list",
@@ -19,9 +18,7 @@
 
     "pages/room/home",
     "pages/book/book",
-    "pages/mine/mine",
     "pages/book/room/room",
-    "pages/mine/order/order"
   ],
   "window": {
     "backgroundTextStyle": "dark",
